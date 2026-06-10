@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-mistralai
+sentence-transformers
+chromadb
+pypdf
+python-dotenv
+torch
+torchvision
+torchaudio
+pysqlite3-binary
+
