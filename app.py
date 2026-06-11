@@ -1,7 +1,3 @@
-
-from dotenv import load_dotenv
-load_dotenv()
-
 import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -90,7 +86,8 @@ class BGEEmbeddings(Embeddings):
 
 
 llm = ChatMistralAI(
-    model="mistral-small-2506"
+    model="mistral-small-2506",
+    api_key=st.secrets["MISTRAL_API_KEY"]
 )
 
 prompt = ChatPromptTemplate.from_messages([
@@ -229,8 +226,9 @@ if uploaded_file:
     )
 
     vector_store = Chroma.from_documents(
-        documents=chunks,
-        embedding=BGEEmbeddings()
+    documents=chunks,
+    embedding=BGEEmbeddings(),
+    persist_directory="./chroma_db"
     )
 
     retriever = vector_store.as_retriever(
