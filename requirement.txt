@@ -8,7 +8,6 @@ chromadb
 pypdf
 python-dotenv
 torch
-torchvision
-torchaudio
-pysqlite3-binary
-
+transformers
+protobuf
+sentencepiece
