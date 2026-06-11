@@ -1,22 +1,19 @@
-streamlit==1.46.0
+streamlit
 
-langchain==0.3.26
-langchain-community==0.3.27
-langchain-core==0.3.68
-langchain-text-splitters==0.3.8
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
 
-langchain-mistralai==0.2.11
-mistralai==1.9.3
+langchain-mistralai
+mistralai
 
-chromadb==1.0.13
-sentence-transformers==4.1.0
+sentence-transformers
 
-pypdf==5.6.1
-beautifulsoup4==4.13.4
-tavily-python==0.7.8
+pypdf
+beautifulsoup4
 
-torch==2.7.1
-transformers==4.52.4
+chromadb<1.0
 
-pysqlite3-binary
+transformers
 protobuf==3.20.3
